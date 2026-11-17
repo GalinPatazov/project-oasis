@@ -1,10 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
 body{
-    background-color: rgb(0, 22, 0);
+    background-color: #0e1a1a;
+}
+
+.map-tiles {
+   filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.1) brightness(0.7);
 }
 
 #map {
+    background-color: #0f1a1a;
+    flex: 1;                
     height: 500px;
-    width: 750px;
     border-radius: 20px;
     overflow: hidden;
+}
+
+.map-section {
+    display: flex;
+    align-items: flex-start;        
+    justify-content: space-between; 
+    gap: 20px;
+}
+
+.measurements-corner {
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    text-align: right;
+    margin: 5px;
+    background-color: #182828;
+    
+}
+
+.map-legend {
+    background-color: rgba(15, 26, 26, 0.9);
+    color: white;
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.map-legend h4 {
+    margin: 0 0 6px;
+    font-size: 12px;
+}
+
+.map-legend .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.map-legend .no-data {
+    border: 1px dashed white;
+    background: none;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: white;
+    padding-right: 235px;
+    margin-bottom: 115px;
+}
+
+.measurements-corner p {
+    color: white;
+    padding-left: 10px;
+    text-align: left;
+    
+}
+
+.history-chart-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.information-corner {
+    background-color: #182828;
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    text-align: left;
+    margin: 5px 5px 5px auto;
+    padding: 20px;
+}
+
+.information-corner h2 {
+    margin: 0 0 15px;
+    font-size: 18px;
+    color: white;
+    white-space: nowrap;
+}
+
+.information-corner details {
+    background-color: #0f1c1c;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.information-corner summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    list-style: none;          
+    display: flex;
+    justify-content: space-between;
+}
+
+.information-corner summary::-webkit-details-marker {
+    display: none;             
+}
+
+.information-corner summary::after {
+    content: "+";              
+}
+
+.information-corner details[open] summary::after {
+    content: "−";              
+}
+
+.information-corner details p {
+    color: #cfd8d8;
+    font-size: 16px;
+    margin: 10px 0 0;
+}
+
+.history-card {
+    background-color: #182828;
+    border-radius: 20px;
+    padding: 20px;
+    flex: 1;          
+    min-width: 0;
+    margin: 5px;
+}
+
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.history-card h2 {
+    margin: 0;
+    padding-right: 0;      
+    margin-bottom: 4px;
+    font-size: 18px;
+    color: white;
+}
+
+.history-subtitle {
+    margin: 0;
+    font-size: 12px;
+    color: #8fa8a8;
+}
+
+.range-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.range-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid #3a5050;
+    border-radius: 10px;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+.range-btn.active {
+    background: #e8eeee;
+    color: #0e1a1a;
+}
+
+.chart-wrapper {
+    width: 100%;
+    height: 405px;         
 }
