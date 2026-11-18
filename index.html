@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oasis</title>
+    <link rel="icon" href="browser_logo_transparent.png"> 
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css"/>
+    
+</head>
+
+<body>
+     <img src="Oasis logo.png" style="width: 150px;">
+
+    
+    <div class="map-section">
+
+       <div id="map"></div>
+
+       <div class="measurements-corner">
+        <h2>Current measurements</h2>
+        <p>PM2.5</p>
+        <P>PM10</P>
+        <p>Temperature</p>
+        <p>Humidity</p>
+        <p>Air pressure</p>
+       </div>
+
+    </div>
+     
+    <div class="history-chart-section">
+
+      <div class="history-card">
+        <div class="history-header">
+        <div>
+          <h2>History</h2>
+          <p class="history-subtitle">Overall air quality index - [sensor name]</p>
+        </div>
+        <div class="range-buttons">
+          <button class="range-btn active">24 hours</button>
+          <button class="range-btn">7 days</button>
+
+      </div>
+    </div>
+
+    <div class="chart-wrapper">
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+   
+        <div class="information-corner">
+            <h2>Information corner</h2>
+
+            <details open>
+                <summary>What do the temperature, humidity and air pressure tell us?</summary>
+                <p>Temperature, humidity, and air pressure shape air quality <br>
+                    by controlling how fast pollutants form chemically,<br>
+                     how easily they disperse or get trapped near the ground,<br>
+                      and how moisture interacts with particles.</p>
+            </details>
+
+            <details open>
+                <summary>What are PM2.5 and PM10?</summary>
+                <p>PM2.5 and PM10 are types of microscopic particulate matter (air pollution)
+                    made of tiny solid particles and liquid droplets suspended in the air. </p>
+            </details>
+
+            <details open>
+                <summary>How can people mitigate their exposure to PM2.5 and PM10 indoors?</summary>
+                <p>- Place a portable air purifier with a HEPA filter <br>
+                   - Improve ventilation during cooking <br>
+                   - Avoid burning and smoke sources <br>
+                   - Keep windows shut during high-pollution outdoor events</p>
+            </details>
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1"></script>
+    <script src="script.js"></script>
+    <script src="chart.js"></script>
+
+
+
+  </body>
